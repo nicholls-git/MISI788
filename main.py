@@ -1,6 +1,7 @@
 import os
-from csv import reader
 import time
+
+from csv import reader
 from Handler import *
 
 """
@@ -12,7 +13,6 @@ March 22, 2022
 """
 
 inputFile = r'D:\MISI788\PROGRAM\HUMINT_TEMPLATE.csv'
-wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
 
 #Generate lists
 special_numbers = []
@@ -47,5 +47,5 @@ for x in password_factors:
 #print (special_numbers, special_words)
             
 
-Handler(special_words, special_numbers, special_characters)
+generate(special_words, special_numbers, special_characters)
 print("Wordlist generated.")

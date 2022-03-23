@@ -1,11 +1,13 @@
 #Function: lowercase words
+wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
+f = open('wordlist', 'a')
 def lowercase(lower_list):
     for item in lower_list:
         string = item.lower()
         print("writing: ", string)
         f.write(string)
         f.write('\n')
-
+        
 #Function: lowercase words with special characters (SC) 
 #def lowercase_SC(lower_list, special_characters):
     
@@ -38,4 +40,4 @@ def uppercase(upper_list):
 #Function: Uppercase words with special numbers and special characters
 #def uppercase_SN_SC(upper_list, special_numbers, special_characters):
     
-
+f.close()
