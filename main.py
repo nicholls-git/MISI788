@@ -3,6 +3,7 @@ import time
 
 from csv import reader
 import Handler
+import config
 
 """
 Noah Earl Nicholls
@@ -12,8 +13,6 @@ Version 1.1
 March 22, 2022
 """
 
-inputFile = r'D:\MISI788\GIT\MISI7888\HUMINT_TEMPLATE.csv'
-
 #Generate lists
 special_numbers = []
 special_words = []
@@ -21,7 +20,7 @@ special_characters = ['!', '@', '#', '$', '%']
 
 #Open CSV file, parse 2nd row into list
 x=0
-with open (inputFile) as csv_file:
+with open (config.inputFile) as csv_file:
     csv_reader = reader(csv_file, delimiter = '\t')
     for row in csv_reader:
         if (x == 1):

@@ -9,7 +9,7 @@ def lowercase(lower_list):
             print("writing: ", string)
             f.write(string)
             f.write('\n')
-        
+        f.close()   
 #Function: lowercase words with special characters (SC) 
 #def lowercase_SC(lower_list, special_characters):
     
@@ -30,7 +30,7 @@ def uppercase(upper_list):
             print("writing: ", string)
             f.write(string)
             f.write('\n')
-
+        f.close()
 #Function: Uppercase words with special characters (SC) 
 #def uppercase_SC(upper_list, special_characters):
     
