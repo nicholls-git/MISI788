@@ -1,12 +1,13 @@
 import os
 from csv import reader
 import time
+import Algorithms
 
 """
 Noah Earl Nicholls
 MISI 788 Specialty Project
 APPLYING HUMAN INTELLIGENCE TO OFFENSIVE CYBER OPERATIONS AND DIGITAL FORENSICS: A PYTHON FRAMEWORK
-Version 1.0
+Version 1.1
 March 22, 2022
 """
 
@@ -30,7 +31,7 @@ with open (inputFile) as csv_file:
         x+=1
 
 #Print list for user
-print ("The HUMINT factors that will be used to generate passwords are as follows \n", password_factors)
+print ("The HUMINT factors that will be used to generate passwords are as follows: \n", password_factors)
 
 #Generate lists
 special_numbers = []

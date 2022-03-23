@@ -1,5 +1,10 @@
 #Function: lowercase words
 def lowercase(lower_list):
+for item in lower_list:
+        string = item.lower()
+        print("writing: ", string)
+        f.write(string)
+        f.write('\n')
 
 #Function: lowercase words with special characters (SC) 
 def lowercase_SC(lower_list, special_characters):
@@ -15,6 +20,11 @@ def lowercase_SN_SC(lower_SN_SC_list, special_numbers, special_characters):
 
 #Function: Uppercase words
 def uppercase(upper_list):
+    for item in upper_list:
+        string = item.capitalize()
+        print("writing: ", string)
+        f.write(string)
+        f.write('\n')
 
 #Function: Uppercase words with special characters (SC) 
 def uppercase_SC(upper_list, special_characters):
