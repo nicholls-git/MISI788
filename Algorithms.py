@@ -1,6 +1,4 @@
 #Function: lowercase words
-wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
-f = open('wordlist', 'a')
 def lowercase(lower_list):
     for item in lower_list:
         string = item.lower()

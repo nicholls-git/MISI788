@@ -46,6 +46,7 @@ for x in password_factors:
 #Test Print
 #print (special_numbers, special_words)
             
-
-generate(special_words, special_numbers, special_characters)
+wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
+with open('wordlist', 'a') as f:
+    generate(special_words, special_numbers, special_characters)
 print("Wordlist generated.")
