@@ -2,7 +2,7 @@ import os
 import time
 
 from csv import reader
-from Handler import *
+import Handler
 
 """
 Noah Earl Nicholls
@@ -12,7 +12,7 @@ Version 1.1
 March 22, 2022
 """
 
-inputFile = r'D:\MISI788\PROGRAM\HUMINT_TEMPLATE.csv'
+inputFile = r'D:\MISI788\GIT\MISI7888\HUMINT_TEMPLATE.csv'
 
 #Generate lists
 special_numbers = []
@@ -44,9 +44,7 @@ for x in password_factors:
             print("Template error, ensure entries are only in second row.")
 
 #Test Print
-#print (special_numbers, special_words)
-            
-wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
-with open('wordlist', 'a') as f:
-    generate(special_words, special_numbers, special_characters)
+#print (special_numbers, special_words)          
+Handler.generate(special_words, special_numbers, special_characters)
+
 print("Wordlist generated.")

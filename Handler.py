@@ -1,7 +1,5 @@
-from Algorithms import *
+import Algorithms
 
-wordlist = r'D:\MISI788\PROGRAM\PasswordList.txt'
 def generate(special_words, special_numbers, special_characters):
-    with open(wordlist, 'w') as f:
-        lowercase(special_words);
-        uppercase(special_words);
+        Algorithms.lowercase(special_words);
+        Algorithms.uppercase(special_words);
