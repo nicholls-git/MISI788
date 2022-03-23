@@ -1,0 +1,1 @@
+def Handler(lower_list, upper_list, special_numbers, special_characters):
