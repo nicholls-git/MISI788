@@ -1,7 +1,7 @@
 import os
 import config
-#Function: lowercase words
 
+#Function: lowercase words
 def lowercase(lower_list):
     with open(config.wordlist, 'a') as f:
         for item in lower_list:
@@ -9,12 +9,32 @@ def lowercase(lower_list):
             print("writing: ", string)
             f.write(string)
             f.write('\n')
-        f.close()   
+        f.close()
+        
 #Function: lowercase words with special characters (SC) 
-#def lowercase_SC(lower_list, special_characters):
-    
+def lowercase_SC(lower_list, special_characters):
+    with open(config.wordlist, 'a') as f:
+        for word in lower_list:
+            for sc in special_characters:
+                string = word.lower()
+                combined = string + sc
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+        f.close()
+            
 #Function: lowercase words with numbers 0-9999
-#def lowercase_numbers(lower_list):
+def lowercase_numbers(lower_list):
+    with open(config.wordlist, 'a') as f:
+        for word in lower_list:
+            for x in range(10000):
+                string = word.lower()
+                xstr = str(x)
+                combined = (string + xstr)
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+        f.close()             
     
 #Function: lowercase words with special numbers list
 #def lowercase_SN(lower_words, special_numbers):
