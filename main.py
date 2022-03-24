@@ -16,7 +16,7 @@ March 22, 2022
 #Generate lists
 special_numbers = []
 special_words = []
-special_characters = ['!', '@', '#', '$', '%']
+special_characters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+']
 
 #Open CSV file, parse 2nd row into list
 x=0
