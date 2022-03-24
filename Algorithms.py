@@ -21,6 +21,7 @@ def lowercase_SC(lower_list, special_characters):
                 print ("writing: ", combined)
                 f.write(combined)
                 f.write('\n')
+                config.counter += 1
         f.close()
             
 #Function: lowercase words with numbers 0-9999
@@ -34,14 +35,38 @@ def lowercase_numbers(lower_list):
                 print ("writing: ", combined)
                 f.write(combined)
                 f.write('\n')
+                config.counter += 1
         f.close()             
     
 #Function: lowercase words with special numbers list
-#def lowercase_SN(lower_words, special_numbers):
-    
+def lowercase_SN(lower_list, special_numbers):
+    with open(config.wordlist, 'a') as f:
+        for word in lower_list:
+            for number in special_numbers:
+                string = word.lower()
+                nmb = str(number)
+                combined = (string + nmb)
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+                config.counter += 1
+        f.close() 
+        
 #Function: lowercase words with special numbers and special characters
-#def lowercase_SN_SC(lower_SN_SC_list, special_numbers, special_characters):
-    
+def lowercase_SN_SC(lower_list, special_numbers, special_characters):
+    with open(config.wordlist, 'a') as f:
+        for word in lower_list:
+            for x in range (10000):
+                for sc in special_characters:
+                    string = word.lower()
+                    xstr = str(x)
+                    combined = (string + xstr + sc)
+                    print ("writing: ", combined)
+                    f.write(combined)
+                    f.write('\n')
+                    config.counter += 1
+        f.close() 
+        
 #Function: Uppercase words
 def uppercase(upper_list):
     with open(config.wordlist, 'a') as f:
@@ -50,7 +75,9 @@ def uppercase(upper_list):
             print("writing: ", string)
             f.write(string)
             f.write('\n')
+            config.counter += 1
         f.close()
+        
 #Function: Uppercase words with special characters (SC) 
 #def uppercase_SC(upper_list, special_characters):
     

@@ -9,7 +9,7 @@ import config
 Noah Earl Nicholls
 MISI 788 Specialty Project
 APPLYING HUMAN INTELLIGENCE TO OFFENSIVE CYBER OPERATIONS AND DIGITAL FORENSICS: A PYTHON FRAMEWORK
-Version 1.1
+Version 1.3
 March 22, 2022
 """
 
@@ -46,4 +46,6 @@ for x in password_factors:
 #print (special_numbers, special_words)          
 Handler.generate(special_words, special_numbers, special_characters)
 
+print('\n')
 print("Wordlist generated.")
+print(str(config.counter) + " passwords were generated.")
