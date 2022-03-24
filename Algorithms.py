@@ -79,13 +79,54 @@ def uppercase(upper_list):
         f.close()
         
 #Function: Uppercase words with special characters (SC) 
-#def uppercase_SC(upper_list, special_characters):
-    
+def uppercase_SC(upper_list, special_characters):
+    with open(config.wordlist, 'a') as f:
+        for word in upper_list:
+            for sc in special_characters:
+                string = word.capitalize()
+                combined = string + sc
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+                config.counter += 1
+        f.close()
 #Function: Uppercase words with numbers 0-9999
-#def uppercase_numbers(upper_list):
-    
+def uppercase_numbers(upper_list):
+    with open(config.wordlist, 'a') as f:
+        for word in upper_list:
+            for x in range(10000):
+                string = word.capitalize()
+                xstr = str(x)
+                combined = (string + xstr)
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+                config.counter += 1
+        f.close()    
 #Function: Uppercase words with special numbers and special characters
-#def uppercase_SN(upper_list, special_numbers):
-    
+def uppercase_SN(upper_list, special_numbers):
+    with open(config.wordlist, 'a') as f:
+        for word in upper_list:
+            for number in special_numbers:
+                string = word.capitalize()
+                nmb = str(number)
+                combined = (string + nmb)
+                print ("writing: ", combined)
+                f.write(combined)
+                f.write('\n')
+                config.counter += 1
+        f.close() 
 #Function: Uppercase words with special numbers and special characters
-#def uppercase_SN_SC(upper_list, special_numbers, special_characters):
+def uppercase_SN_SC(upper_list, special_numbers, special_characters):
+    with open(config.wordlist, 'a') as f:
+        for word in upper_list:
+            for x in range (10000):
+                for sc in special_characters:
+                    string = word.capitalize()
+                    xstr = str(x)
+                    combined = (string + xstr + sc)
+                    print ("writing: ", combined)
+                    f.write(combined)
+                    f.write('\n')
+                    config.counter += 1
+        f.close() 
