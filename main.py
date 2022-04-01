@@ -2,6 +2,8 @@ import os
 import time
 
 from csv import reader
+
+import csv
 import Handler
 import config
 
@@ -9,22 +11,35 @@ import config
 Noah Earl Nicholls
 MISI 788 Specialty Project
 APPLYING HUMAN INTELLIGENCE TO OFFENSIVE CYBER OPERATIONS AND DIGITAL FORENSICS: A PYTHON FRAMEWORK
-Version 1.3
-March 22, 2022
+Version 1.4
+March 31, 2022
 """
 
 #Generate lists
 special_numbers = []
 special_words = []
 special_characters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+']
+password_factors = []
 
-#Open CSV file, parse 2nd row into list
+
+#Open CSV file, parse 2nd column into list
 x=0
-with open (config.inputFile) as csv_file:
-    csv_reader = reader(csv_file, delimiter = '\t')
-    for row in csv_reader:
-        if (x == 1):
-            password_factors = list(row)
+with open (config.inputFile, newline='') as csv_file:
+    #csv_reader = reader(csv_file, delimiter = ',')
+    data = csv.DictReader(csv_file)
+    for row in data:
+        if (x >= 0):
+            base_string=str(row['Input'])
+            password_factors.append(base_string)
+            
+            #Replace 'o' or 'O' with '0' (i.e. Password -> Passw0rd)
+            if 'o' in base_string:
+                lower = base_string.replace('o','0')
+                password_factors.append(lower)
+            if 'O' in base_string:
+                upper = base_string.replace('O','0')
+                password_factors.append(upper)
+            
         x+=1
 
 #Print list for user

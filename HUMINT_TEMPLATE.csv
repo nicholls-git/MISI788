@@ -1,2 +1,15 @@
-first_name	last_name	pet_name	street_name	favorite_car	favorite_colour	favorite_movie	favorite_author	favorite_band	year_born	year_married	year_graduated	year_engaged
-John	Doe	Shadow	Mulberry	Mustang	Yellow	Braveheart	Rowling	Nirvana	2000	2017	2016	2018
+﻿Factor,Input
+first_name,John
+last_name,Doe
+pet_name,Shadow
+street_name,Mulberry
+street_number,1234
+favorite_car,camaro
+favorite_colour,yellow
+favorite_movie,Braveheart
+favorite_author,Tolkein
+favorite_band,Rush
+year_born,1990
+year_married,2018
+year_engaged,2016
+year_graduated,2008
