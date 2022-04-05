@@ -90,6 +90,7 @@ def uppercase_SC(upper_list, special_characters):
                 f.write('\n')
                 config.counter += 1
         f.close()
+        
 #Function: Uppercase words with numbers 0-9999
 def uppercase_numbers(upper_list):
     with open(config.wordlist, 'a') as f:
