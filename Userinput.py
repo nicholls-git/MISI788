@@ -25,11 +25,14 @@ def search_for_folder_path ():
     return tempdir   
     
 def gather_info():
-    
-    print("Welcome to Noah Nicholls' MISI 788 Submission.")
-    print("Select Where the Input CSV File is Located.")
-    print("**********************************************")
+    #Intro
+    print("v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^")
+    print("Welcome to Noah Nicholls' MISI 788 Submission")
+    print("Select Where the Input CSV File is Located")
+    print("v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^")
+
     config.inputFile = (str(search_for_file_path()))
+    print("Select Folder Where Password List Will Generate")
     config.passwordFolderPath = (str(search_for_folder_path()))
     config.wordlist = str(config.passwordFolderPath) + '/passwordlist.txt'
     print("File path is of .csv file is: " + str(config.inputFile))
@@ -40,7 +43,8 @@ def gather_info():
     print("2. Medium. Uppercase and lowercase with numbers and special characters")
     print("3. Long. Uppercase and lowercase with numbers, special characters, and word manipulation ('i.e. Password -> Passw0rd")
 
+    #Gather user input for how complicated user wants password generation
     userChoice = input("Enter option (1-3): ")
     while userChoice not in ['1', '2', '3']:
-        userChoice = input("You must enter 1, 2, or 3")
+        userChoice = input("You must enter 1, 2, or 3: ")
     return int(userChoice)
