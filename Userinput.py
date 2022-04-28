@@ -48,3 +48,28 @@ def gather_info():
     while userChoice not in ['1', '2', '3']:
         userChoice = input("You must enter 1, 2, or 3: ")
     return int(userChoice)
+    
+    print("Enter how many numbers you would like added to end of password (i.e. Password1111)")
+    numberChoice = input("Enter option (1-4): (1 = passwordX, 2 = passwordXX, etc. ")
+    while numberChoice not in ['1', '2', '3', '4']:
+        numberChoise = input("You must enter 1, 2, 3, or 4: ")
+    return int(numberChoice)
+
+def number_gather():
+
+    print("Enter how many numbers you would like added to end of password (i.e. Password1111)")
+    numberChoiceStr = input("Enter option (1-4)(1 = 0-9, 2 = 0-99, 3 = 0-999, 4 = 9999): ")
+    while numberChoiceStr not in ['1', '2', '3', '4']:
+        numberChoiceStr = input("You must enter 1, 2, 3, or 4: ")    
+
+    numberChoice = int(numberChoiceStr)
+    #Configur config.py number_length parameter. This changes how many numbers (0-9, 0-99, 0-999, or 0-9999) to append to the end of each password)
+    if numberChoice == 1:
+        config.number_length = 10
+    elif numberChoice == 2: 
+        config.number_length = 100
+    elif numberChoice == 3: 
+        config.number_length = 1000
+    elif numberChoice == 4:
+        config.number_length = 10000
+    

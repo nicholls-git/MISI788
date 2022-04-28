@@ -12,7 +12,7 @@ Noah Earl Nicholls
 MISI 788 Specialty Project
 APPLYING HUMAN INTELLIGENCE TO OFFENSIVE CYBER OPERATIONS AND DIGITAL FORENSICS: A PYTHON FRAMEWORK
 Version 2.0
-April 18, 2022
+April 28, 2022
 """
 
 #Generate lists
@@ -23,17 +23,16 @@ password_factors = []
 
 def main():
 
-    #Call function to gather user input on selection 1, 2, or 3
+    #Call functions to gather user input on userinput.py
     config.user_selection = Userinput.gather_info()
-    
-    #Open CSV file, parse 2nd column into list
-    x=0
+    Userinput.number_gather()
     
     #Open .csv file user selected
     with open (config.inputFile, newline='') as csv_file:
         data = csv.DictReader(csv_file)
         
-        #For each row in .csv file
+        #For each row in .csv file        
+        x=0
         for row in data:
             if (x >= 0):
                 base_string=str(row['Input'])
@@ -78,7 +77,8 @@ def main():
     tic = time.perf_counter()
     Handler.generate(special_words, special_numbers, special_characters)
     toc = time.perf_counter()
-
+    
+    #Print final totals
     print('\n')
     print("Wordlist generated. Filepath: " + str(config.wordlist))
     print(str(config.counter) + " passwords were generated.")

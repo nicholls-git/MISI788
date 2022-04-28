@@ -24,11 +24,11 @@ def lowercase_SC(lower_list, special_characters):
                 config.counter += 1
         f.close()
             
-#Function: lowercase words with numbers 0-9999
+#Function: lowercase words with user specified amount of numbers
 def lowercase_numbers(lower_list):
     with open(config.wordlist, 'a') as f:
         for word in lower_list:
-            for x in range(10000):
+            for x in range(config.number_length):
                 string = word.lower()
                 xstr = str(x)
                 combined = (string + xstr)
@@ -52,11 +52,11 @@ def lowercase_SN(lower_list, special_numbers):
                 config.counter += 1
         f.close() 
         
-#Function: lowercase words with special numbers and special characters
+#Function: lowercase words with special numbers and special characters and user specified amount of numbers
 def lowercase_SN_SC(lower_list, special_numbers, special_characters):
     with open(config.wordlist, 'a') as f:
         for word in lower_list:
-            for x in range (10000):
+            for x in range (config.number_length):
                 for sc in special_characters:
                     string = word.lower()
                     xstr = str(x)
@@ -91,11 +91,11 @@ def uppercase_SC(upper_list, special_characters):
                 config.counter += 1
         f.close()
         
-#Function: Uppercase words with numbers 0-9999
+#Function: Uppercase words with user specified amount of numbers
 def uppercase_numbers(upper_list):
     with open(config.wordlist, 'a') as f:
         for word in upper_list:
-            for x in range(10000):
+            for x in range(config.number_length):
                 string = word.capitalize()
                 xstr = str(x)
                 combined = (string + xstr)
@@ -119,11 +119,11 @@ def uppercase_SN(upper_list, special_numbers):
                 config.counter += 1
         f.close() 
         
-#Function: Uppercase words with special numbers and special characters
+#Function: Uppercase words with special numbers and special characters and user specified amount of numbers
 def uppercase_SN_SC(upper_list, special_numbers, special_characters):
     with open(config.wordlist, 'a') as f:
         for word in upper_list:
-            for x in range (10000):
+            for x in range (config.number_length):
                 for sc in special_characters:
                 
                     string = word.capitalize()

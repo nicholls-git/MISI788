@@ -1,6 +1,7 @@
 import Algorithms
 import config
 
+#Determine how complicate to make password list
 def generate(special_words, special_numbers, special_characters):
     
     if config.user_selection == 1:
